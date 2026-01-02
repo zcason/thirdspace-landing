@@ -55,11 +55,8 @@ export function HeroSection({ rating, matches }) {
             magical matches and real-world connection.
           </p>
 
-          <div id="download" className="mt-8 flex flex-col items-center">
+          <div id="download" className="mt-8 flex items-center">
             <AppStoreBadge />
-            <div className="text-xs text-white/60 mt-2 text-center">
-              iOS app launching soon. Android coming later.
-            </div>
           </div>
         </div>
 

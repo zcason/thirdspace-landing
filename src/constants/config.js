@@ -15,8 +15,8 @@ export const COUNTER_ANIMATION_DURATION = 2400;
 
 // Footer links
 export const FOOTER_LINKS = [
-  { href: "#", label: "Privacy" },
-  { href: "#", label: "Terms" },
-  { href: "#", label: "Contact" },
+  { href: "/privacy/policy", label: "Privacy" },
+  { href: "/privacy/terms", label: "Terms" },
+  { href: "mailto:hi@jointhirdspace.app", label: "Contact" },
 ];
 

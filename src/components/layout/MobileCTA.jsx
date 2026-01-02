@@ -15,7 +15,7 @@ export function MobileCTA() {
       >
         <div className="text-sm">
           <div className="font-semibold">Find your perfect vibe</div>
-          <div className="text-white/70 text-xs">AI-matched in seconds</div>
+          <div className="text-white/70 text-xs">Match in seconds</div>
         </div>
         <a
           href={APP_STORE_URL}
