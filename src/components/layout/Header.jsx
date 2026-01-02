@@ -17,7 +17,7 @@ export function Header() {
         </Link>
         <a
           href={APP_STORE_URL}
-          className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white/10 hover:bg-white/20 transition"
+          className="hidden lg:inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white/10 hover:bg-white/20 transition"
         >
           <Download className="w-4 h-4" /> Download
         </a>

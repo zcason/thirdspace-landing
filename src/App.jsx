@@ -6,8 +6,6 @@ import { MobileCTA } from "@/components/layout/MobileCTA";
 import { HeroSection } from "@/components/hero/HeroSection";
 import { StatsGrid } from "@/components/stats/StatsGrid";
 import { FeaturesSection } from "@/components/features/FeaturesSection";
-import { SocialProofSection } from "@/components/social-proof/SocialProofSection";
-import { UrgencySection } from "@/components/cta/UrgencySection";
 import { VibePickerDemo } from "@/components/interactive-demo/VibePickerDemo";
 import { useCounter } from "@/hooks/useCounter";
 import { brandColors, getBrandGradientStyles } from "@/constants/brand";
@@ -58,12 +56,6 @@ export default function App() {
           <VibePickerDemo />
         </div>
       </section>
-
-      {/* Social Proof */}
-      <SocialProofSection />
-
-      {/* Urgency CTA */}
-      <UrgencySection />
 
       {/* Footer */}
       <Footer />
