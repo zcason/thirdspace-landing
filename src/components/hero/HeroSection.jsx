@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { AppStoreBadge } from "@/components/shared/AppStoreBadge";
 import { shimmer } from "@/utils/styles";
 import homePageScreenshot from "@/assets/screenshots/home-page.png";
-import vibePageScreenshot from "@/assets/screenshots/vibe-page.png";
-import lastScreenshot from "@/assets/screenshots/last-screenshot.png";
+import checkInPageScreenshot from "@/assets/screenshots/check-in-page.png";
+import explorePageScreenshot from "@/assets/screenshots/explore-page.png";
 import { img } from "framer-motion/client";
 // Add new screenshots here by importing them, then add to the screenshots array below
 // Example: import secondScreenshot from "@/assets/screenshots/second-page.png";
@@ -26,12 +26,12 @@ export function HeroSection({ rating, matches }) {
       alt: "ThirdSpace app home page"
     },
     {
-      image: vibePageScreenshot, // Replace with your second screenshot
-      alt: "ThirdSpace app vibe page"
+      image: checkInPageScreenshot,
+      alt: "ThirdSpace app check-in page"
     },
     {
-      image: lastScreenshot, // Replace with your third screenshot
-      alt: "ThirdSpace app last screenshot (temporary)"
+      image: explorePageScreenshot, 
+      alt: "ThirdSpace app explore page"
     }
   ];
   return (
