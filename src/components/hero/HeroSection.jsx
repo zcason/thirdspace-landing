@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { AppStoreBadge } from "@/components/shared/AppStoreBadge";
 import { shimmer } from "@/utils/styles";
 import homePageScreenshot from "@/assets/screenshots/home-page.png";
-import checkInPageScreenshot from "@/assets/screenshots/check-in-page.png";
+import checkInPageScreenshot from "@/assets/screenshots/check-in-screen.png";
 import explorePageScreenshot from "@/assets/screenshots/explore-page.png";
 import { img } from "framer-motion/client";
 // Add new screenshots here by importing them, then add to the screenshots array below
