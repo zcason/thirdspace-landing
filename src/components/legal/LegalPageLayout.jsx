@@ -173,3 +173,4 @@ export function LegalPageLayout({ title, lastUpdated, children, currentPath, sec
   );
 }
 
+

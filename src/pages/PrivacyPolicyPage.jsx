@@ -133,8 +133,9 @@ export function PrivacyPolicyPage() {
 
       <h2 id="childrens-privacy">Children's Privacy</h2>
       <p>
-        thirdspace is not intended for users under 13 years old. We do not knowingly collect 
-        data from children.
+        thirdspace is intended for users 18 years of age and older. We do not knowingly collect 
+        personal data from anyone under 18. If we learn that we have collected data from a user 
+        under 18, we will promptly delete that information.
       </p>
 
       <h2 id="international-transfers">International Transfers</h2>
@@ -158,4 +159,6 @@ export function PrivacyPolicyPage() {
     </LegalPageLayout>
   );
 }
+
+
 

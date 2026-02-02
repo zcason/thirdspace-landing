@@ -4,9 +4,7 @@
  */
 
 // Store URLs - iOS-only release (Android coming later)
-// Replace the URL below with your actual App Store link when available
-// Format: https://apps.apple.com/us/app/thirdspace/id[YOUR_APP_ID]
-export const APP_STORE_URL = "https://apps.apple.com/us/app/thirdspace/id000000000";
+export const APP_STORE_URL = "https://apps.apple.com/us/app/thirdspace-find-your-vibe/id6757322582";
 
 // App metadata
 export const APP_RATING = 4.8;
