@@ -5,20 +5,21 @@ import { LegalPageLayout } from "@/components/legal/LegalPageLayout";
  * Sections for Table of Contents
  */
 const sections = [
-  { id: "agreement-to-terms", title: "Agreement to Terms" },
+  { id: "acceptance-of-terms", title: "Acceptance of Terms" },
   { id: "description-of-service", title: "Description of Service" },
   { id: "user-accounts", title: "User Accounts" },
-  { id: "acceptable-use", title: "Acceptable Use" },
-  { id: "points-and-rewards", title: "Points and Rewards" },
-  { id: "subscription-and-purchases", title: "Subscription and Purchases" },
+  { id: "user-conduct", title: "User Conduct" },
+  { id: "content", title: "Content" },
   { id: "intellectual-property", title: "Intellectual Property" },
+  { id: "third-party-services", title: "Third-Party Services" },
   { id: "disclaimers", title: "Disclaimers" },
   { id: "limitation-of-liability", title: "Limitation of Liability" },
   { id: "indemnification", title: "Indemnification" },
   { id: "changes-to-terms", title: "Changes to Terms" },
+  { id: "termination", title: "Termination" },
   { id: "governing-law", title: "Governing Law" },
-  { id: "dispute-resolution", title: "Dispute Resolution" },
-  { id: "contact", title: "Contact" },
+  { id: "apple-app-store-terms", title: "Apple App Store Terms" },
+  { id: "contact", title: "Contact Us" },
 ];
 
 /**
@@ -29,151 +30,146 @@ export function TermsOfServicePage() {
   return (
     <LegalPageLayout
       title="Terms of Service"
-      lastUpdated="January 2025"
+      lastUpdated="February 11, 2026"
       currentPath="/privacy/terms"
       sections={sections}
     >
-      <h2 id="agreement-to-terms">Agreement to Terms</h2>
       <p>
-        By downloading or using thirdspace, you agree to these Terms of Service. If you 
-        disagree with any part, please do not use the app.
+        Welcome to Thirdspace. By downloading, installing, or using our application, you agree 
+        to be bound by these Terms of Service ("Terms"). Please read them carefully.
       </p>
 
-      <h2 id="description-of-service">Description of Service</h2>
-      <p>thirdspace is a mobile application that:</p>
-      <ul>
-        <li>Recommends nearby venues based on your mood and preferences</li>
-        <li>Allows you to check in at venues and earn points</li>
-        <li>Tracks achievements and exploration progress</li>
-        <li>Provides a gamified venue discovery experience</li>
-      </ul>
-
-      <h2 id="user-accounts">User Accounts</h2>
-
-      <h3>Account Creation</h3>
-      <ul>
-        <li>You must provide accurate information</li>
-        <li>You are responsible for maintaining account security</li>
-        <li>You must be at least 13 years old to use the app</li>
-      </ul>
-
-      <h3>Account Termination</h3>
-      <ul>
-        <li>You may delete your account at any time</li>
-        <li>We may suspend accounts that violate these terms</li>
-        <li>Upon termination, all data is permanently deleted</li>
-      </ul>
-
-      <h2 id="acceptable-use">Acceptable Use</h2>
-      <p>You agree <strong>NOT</strong> to:</p>
-      <ul>
-        <li>Use the app for illegal purposes</li>
-        <li>Attempt to manipulate check-ins or points</li>
-        <li>Interfere with app functionality</li>
-        <li>Create multiple accounts to abuse features</li>
-        <li>Harass other users or venues</li>
-        <li>Post false or misleading venue information</li>
-      </ul>
-
-      <h2 id="points-and-rewards">Points and Rewards</h2>
-
-      <h3>Vibe Points</h3>
-      <ul>
-        <li>Points are earned through legitimate check-ins and achievements</li>
-        <li>Points have no monetary value</li>
-        <li>Points may be redeemable for rewards at partner venues (future feature)</li>
-        <li>We reserve the right to adjust point values</li>
-      </ul>
-
-      <h3>Achievements</h3>
-      <ul>
-        <li>Achievements are awarded based on activity milestones</li>
-        <li>Achievement criteria may be updated periodically</li>
-      </ul>
-
-      <h2 id="subscription-and-purchases">Subscription and Purchases</h2>
-
-      <h3>Premium Subscription</h3>
-      <ul>
-        <li>Premium features are available via subscription</li>
-        <li>Subscriptions are billed through Apple App Store or Google Play</li>
-        <li>Refunds are handled by Apple/Google per their policies</li>
-      </ul>
-
-      <h3>Match Packs</h3>
-      <ul>
-        <li>Additional matches can be purchased</li>
-        <li>Purchased matches do not expire</li>
-        <li>No refunds for unused matches</li>
-      </ul>
-
-      <h2 id="intellectual-property">Intellectual Property</h2>
-      <ul>
-        <li>thirdspace and its content are protected by copyright</li>
-        <li>You may not copy, modify, or distribute app content</li>
-        <li>User-generated content remains yours, but you grant us license to use it</li>
-      </ul>
-
-      <h2 id="disclaimers">Disclaimers</h2>
-
-      <h3>Venue Information</h3>
-      <ul>
-        <li>We do not own or operate venues shown in the app</li>
-        <li>Venue information comes from third-party sources</li>
-        <li>We are not responsible for venue accuracy, availability, or quality</li>
-      </ul>
-
-      <h3>Location Services</h3>
-      <ul>
-        <li>Location accuracy depends on your device</li>
-        <li>Check-in verification requires location access</li>
-      </ul>
-
-      <h3>Service Availability</h3>
-      <ul>
-        <li>We strive for 99% uptime but cannot guarantee availability</li>
-        <li>We may modify or discontinue features with notice</li>
-      </ul>
-
-      <h2 id="limitation-of-liability">Limitation of Liability</h2>
-      <p>To the maximum extent permitted by law:</p>
-      <ul>
-        <li>We are not liable for indirect, incidental, or consequential damages</li>
-        <li>Our total liability is limited to amounts you paid us in the past 12 months</li>
-        <li>Some jurisdictions do not allow these limitations</li>
-      </ul>
-
-      <h2 id="indemnification">Indemnification</h2>
-      <p>You agree to indemnify thirdspace from claims arising from:</p>
-      <ul>
-        <li>Your use of the app</li>
-        <li>Your violation of these terms</li>
-        <li>Your violation of third-party rights</li>
-      </ul>
-
-      <h2 id="changes-to-terms">Changes to Terms</h2>
+      <h2 id="acceptance-of-terms">1. Acceptance of Terms</h2>
       <p>
-        We may update these terms. Continued use after changes constitutes acceptance. 
-        Material changes will be communicated via the app.
+        By accessing or using Thirdspace ("the App"), you agree to be bound by these Terms and 
+        our Privacy Policy. If you do not agree to these Terms, do not use the App.
       </p>
 
-      <h2 id="governing-law">Governing Law</h2>
+      <h2 id="description-of-service">2. Description of Service</h2>
       <p>
-        These terms are governed by the laws of the State of Delaware, United States.
+        Thirdspace is a mobile application that provides social discovery and location-based 
+        services. We reserve the right to modify, suspend, or discontinue any aspect of the 
+        service at any time.
       </p>
 
-      <h2 id="dispute-resolution">Dispute Resolution</h2>
-      <p>
-        Disputes will be resolved through binding arbitration, except where prohibited by law. 
-        You waive the right to participate in class actions.
-      </p>
-
-      <h2 id="contact">Contact</h2>
-      <p>For questions about these terms:</p>
+      <h2 id="user-accounts">3. User Accounts</h2>
       <ul>
-        <li>Email: <a href="mailto:hi@jointhirdspace.app">hi@jointhirdspace.app</a></li>
-        <li>Website: <a href="https://jointhirdspace.app">jointhirdspace.app</a></li>
+        <li>You must be at least 18 years old to use this App</li>
+        <li>You are responsible for maintaining the confidentiality of your account credentials</li>
+        <li>You are responsible for all activities that occur under your account</li>
+        <li>You agree to provide accurate and complete information when creating your account</li>
       </ul>
+
+      <h2 id="user-conduct">4. User Conduct</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the App for any unlawful purpose</li>
+        <li>Harass, abuse, or harm other users</li>
+        <li>Impersonate any person or entity</li>
+        <li>Interfere with or disrupt the App or servers</li>
+        <li>Attempt to gain unauthorized access to any portion of the App</li>
+        <li>Use the App to send spam or unsolicited messages</li>
+      </ul>
+
+      <h2 id="content">5. Content</h2>
+      <ul>
+        <li>You retain ownership of content you create and share through the App</li>
+        <li>By posting content, you grant us a non-exclusive, worldwide, royalty-free license to use, display, and distribute your content within the App</li>
+        <li>We reserve the right to remove any content that violates these Terms</li>
+      </ul>
+
+      <h2 id="intellectual-property">6. Intellectual Property</h2>
+      <p>
+        The App and its original content, features, and functionality are owned by Thirdspace 
+        and are protected by international copyright, trademark, and other intellectual property laws.
+      </p>
+
+      <h2 id="third-party-services">7. Third-Party Services</h2>
+      <p>
+        The App may contain links to third-party websites or services. We are not responsible 
+        for the content or practices of any third-party services.
+      </p>
+
+      <h2 id="disclaimers">8. Disclaimers</h2>
+      <p>
+        THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER 
+        EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, SECURE, OR 
+        ERROR-FREE.
+      </p>
+
+      <h2 id="limitation-of-liability">9. Limitation of Liability</h2>
+      <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY LAW, THIRDSPACE SHALL NOT BE LIABLE FOR ANY INDIRECT, 
+        INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES RESULTING FROM YOUR USE OF THE APP.
+      </p>
+
+      <h2 id="indemnification">10. Indemnification</h2>
+      <p>
+        You agree to indemnify and hold harmless Thirdspace and its officers, directors, employees, 
+        and agents from any claims, damages, or expenses arising from your use of the App or 
+        violation of these Terms.
+      </p>
+
+      <h2 id="changes-to-terms">11. Changes to Terms</h2>
+      <p>
+        We reserve the right to modify these Terms at any time. We will notify users of any 
+        material changes. Your continued use of the App after changes constitutes acceptance 
+        of the new Terms.
+      </p>
+
+      <h2 id="termination">12. Termination</h2>
+      <p>
+        We may terminate or suspend your account and access to the App at our sole discretion, 
+        without notice, for conduct that we believe violates these Terms or is harmful to other 
+        users, us, or third parties.
+      </p>
+
+      <h2 id="governing-law">13. Governing Law</h2>
+      <p>
+        These Terms shall be governed by and construed in accordance with the laws of the State 
+        of California, without regard to its conflict of law provisions.
+      </p>
+
+      <h2 id="apple-app-store-terms">14. Apple App Store Terms</h2>
+      <p>For users who download the App from the Apple App Store, the following additional terms apply:</p>
+      <ul>
+        <li>These Terms are between you and Thirdspace, not Apple</li>
+        <li>Apple has no obligation to furnish any maintenance or support services with respect to the App</li>
+        <li>Apple is not responsible for any product warranties or claims relating to the App</li>
+        <li>Apple is not responsible for addressing any claims relating to the App or your possession and/or use of the App</li>
+        <li>Apple is a third-party beneficiary of these Terms</li>
+      </ul>
+
+      <h3>Apple Licensed Application End User License Agreement</h3>
+      <p>
+        The App is licensed to you under Apple's standard Licensed Application End User License 
+        Agreement (EULA). By using the App, you also agree to Apple's terms, which can be found here:
+      </p>
+      <p>
+        <a 
+          href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-cyan-400 hover:text-cyan-300 underline"
+        >
+          Apple's Licensed Application End User License Agreement
+        </a>
+      </p>
+
+      <h2 id="contact">15. Contact Us</h2>
+      <p>
+        If you have any questions about these Terms, please contact us at{" "}
+        <a href="mailto:hi@jointhirdspace.app" className="text-cyan-400 hover:text-cyan-300 underline">
+          hi@jointhirdspace.app
+        </a>.
+      </p>
+
+      <div className="mt-8 pt-6 border-t border-white/10">
+        <p className="text-sm text-white/60">
+          By using Thirdspace, you acknowledge that you have read, understood, and agree to be 
+          bound by these Terms of Service.
+        </p>
+      </div>
     </LegalPageLayout>
   );
 }
