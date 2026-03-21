@@ -44,15 +44,15 @@ export function HeroSection({ rating, matches }) {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-extrabold tracking-tight"
           >
-            Stop planning.{" "}
+            Get out of the house.{" "}
             <span className="bg-clip-text text-transparent brand-gradient">
-              Start vibing.
+              Find your next place.
             </span>
           </motion.h1>
           <p className="mt-5 text-lg text-white/80 max-w-xl">
-            Your AI companion that instantly connects you with the perfect third
-            place experience happening within 30 minutes. No overthinking—just
-            magical matches and real-world connection.
+            Thirdspace helps you find the right third place for right now. A place to
+            work, recharge, or be around people in real life. Tell us your vibe and
+            we’ll point you to nearby spots worth showing up for.
           </p>
 
           <div id="download" className="mt-8 flex items-center">
