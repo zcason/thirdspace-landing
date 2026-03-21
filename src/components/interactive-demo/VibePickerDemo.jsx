@@ -76,7 +76,7 @@ export function VibePickerDemo() {
         <MapPin className="w-4 h-4" /> Austin, Texas
       </div>
       <div className="text-sm text-white/80 mb-3">
-        Pick a vibe to preview nearby places:
+        Pick a vibe to preview nearby third places:
       </div>
       <div className="grid grid-cols-3 gap-2 mb-5">
         {vibes.map((v) => (

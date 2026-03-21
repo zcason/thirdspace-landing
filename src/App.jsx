@@ -49,7 +49,7 @@ export default function App() {
               Try it yourself
             </h2>
             <p className="text-white/80 mt-3 max-w-2xl mx-auto">
-              See how Thirdspace helps you find a place that fits the moment.
+              See how Thirdspace helps you find the right place for the moment.
               Pick a vibe and preview nearby spots in seconds.
             </p>
           </div>

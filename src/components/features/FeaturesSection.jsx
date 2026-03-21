@@ -12,19 +12,19 @@ export function FeaturesSection() {
       icon: Zap,
       pill: "Personalized picks",
       title: "Less deciding, more showing up",
-      desc: "Share your mood, energy, timing, and context, and Thirdspace narrows the list to a few nearby places that actually fit.",
+      desc: "Tell us how you feel, what kind of energy you want, and how far you want to go. Thirdspace narrows the list to a few nearby places that actually fit.",
     },
     {
       icon: Map,
       pill: "Live map",
       title: "Discover third places nearby",
-      desc: "Browse a live map of cafés, libraries, parks, and other third places with vibe tags, filters, and quick directions.",
+      desc: "See cafés, libraries, parks, and other third places on a live map with vibe tags, filters, and quick directions.",
     },
     {
       icon: Trophy,
       pill: "Check-ins",
       title: "Build momentum in real life",
-      desc: "Check in when you go out, keep track of places you love, and get rewarded for building a richer offline routine.",
+      desc: "Check in when you go, remember the places you love, and build a richer offline routine over time.",
     },
   ];
 

@@ -46,13 +46,13 @@ export function HeroSection({ rating, matches }) {
           >
             Get out of the house.{" "}
             <span className="bg-clip-text text-transparent brand-gradient">
-              Find your people places.
+              Find your next place.
             </span>
           </motion.h1>
           <p className="mt-5 text-lg text-white/80 max-w-xl">
-            Thirdspace helps you find the right third place for the moment—somewhere
-            to work, recharge, or be around people in real life. Tell us your vibe,
-            and we’ll surface nearby spots worth showing up for.
+            Thirdspace helps you find the right third place for right now. A place to
+            work, recharge, or be around people in real life. Tell us your vibe and
+            we’ll point you to nearby spots worth showing up for.
           </p>
 
           <div id="download" className="mt-8 flex items-center">
