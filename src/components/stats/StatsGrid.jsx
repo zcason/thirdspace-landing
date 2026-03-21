@@ -7,9 +7,9 @@ import { StatCard } from "./StatCard";
  */
 export function StatsGrid() {
   const stats = [
-    { value: "10 sec", label: "Time to perfect match", sub: "Open → Vibe → Go" },
-    { value: ">85%", label: "Vibe compatibility", sub: "Feel seen by AI" },
-    { value: ">60%", label: "Show-up rate", sub: "From match to real life" },
+    { value: "10 sec", label: "Time to your next spot", sub: "Open → choose a vibe → go" },
+    { value: ">85%", label: "Strong place fit", sub: "Recommendations tuned to the moment" },
+    { value: ">60%", label: "Show-up rate", sub: "From planning less to going out more" },
   ];
 
   return (

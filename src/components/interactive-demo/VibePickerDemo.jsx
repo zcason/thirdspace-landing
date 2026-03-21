@@ -19,10 +19,10 @@ export function VibePickerDemo() {
   const results = {
     calm: (
       <div className="space-y-2 text-sm">
-        <div>Got it. 3 options nearby with "calm + study" energy.</div>
+        <div>Got it. Here are 3 nearby places with calm, focused energy.</div>
         <div>
           • <strong>Houndstooth Coffee (Downtown)</strong> — <strong>94%</strong>{" "}
-          vibe match (sunny corner + great Wi-Fi) ☕️
+          fit for the moment (sunny corner + great Wi-Fi) ☕️
         </div>
         <div>
           • <strong>Austin Central Library</strong> — <strong>92%</strong>{" "}
@@ -36,7 +36,7 @@ export function VibePickerDemo() {
     ),
     creative: (
       <div className="space-y-2 text-sm">
-        <div>Dialed in. 3 options with "creative + social" energy in Austin.</div>
+        <div>Dialed in. Here are 3 Austin spots with creative, social energy.</div>
         <div>
           • <strong>Mozart's Coffee Roasters</strong> — <strong>93%</strong>{" "}
           (live piano + lake views) 🎹☕️
@@ -53,7 +53,7 @@ export function VibePickerDemo() {
     ),
     outdoors: (
       <div className="space-y-2 text-sm">
-        <div>Locked. 3 options with "outdoors + recharge" energy in Austin.</div>
+        <div>Locked. Here are 3 Austin spots for getting outside and recharging.</div>
         <div>
           • <strong>Lady Bird Lake Trail</strong> — <strong>95%</strong>{" "}
           (golden-hour loop + skyline view) 🚶‍♂️
@@ -76,7 +76,7 @@ export function VibePickerDemo() {
         <MapPin className="w-4 h-4" /> Austin, Texas
       </div>
       <div className="text-sm text-white/80 mb-3">
-        Pick a vibe to preview instant matches:
+        Pick a vibe to preview nearby places:
       </div>
       <div className="grid grid-cols-3 gap-2 mb-5">
         {vibes.map((v) => (
@@ -97,7 +97,7 @@ export function VibePickerDemo() {
         <div className={`rounded-2xl p-4 ${gradients.glass}`}>
           {!selected ? (
             <div className="text-white/70 text-sm">
-              Select a vibe above to see 3 nearby matches.
+              Select a vibe above to see 3 nearby places.
             </div>
           ) : (
             results[selected]

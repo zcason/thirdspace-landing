@@ -10,21 +10,21 @@ export function FeaturesSection() {
   const features = [
     {
       icon: Zap,
-      pill: "Vibe Match™",
-      title: "AI that actually gets you",
-      desc: "We analyze your mood, energy, time, and weather to instantly recommend 3 spots that feel made for you — happening within 30 minutes.",
+      pill: "Personalized picks",
+      title: "Less deciding, more showing up",
+      desc: "Share your mood, energy, timing, and context, and Thirdspace narrows the list to a few nearby places that actually fit.",
     },
     {
       icon: Map,
-      pill: "Live Heat Map",
-      title: "See where the energy is",
-      desc: "A real-time map of nearby third places with vibe tags like chill, creative, or social — plus smart filters and one-tap directions.",
+      pill: "Live map",
+      title: "Discover third places nearby",
+      desc: "Browse a live map of cafés, libraries, parks, and other third places with vibe tags, filters, and quick directions.",
     },
     {
       icon: Trophy,
-      pill: "Vibe Rewards",
-      title: "Show up, get rewarded",
-      desc: "Earn points, unlock badges, and snag partner perks when you check in to your matches. Explore more, earn more.",
+      pill: "Check-ins",
+      title: "Build momentum in real life",
+      desc: "Check in when you go out, keep track of places you love, and get rewarded for building a richer offline routine.",
     },
   ];
 
