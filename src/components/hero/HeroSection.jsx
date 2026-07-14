@@ -1,13 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { AppStoreBadge } from "@/components/shared/AppStoreBadge";
-import { shimmer } from "@/utils/styles";
 import homePageScreenshot from "@/assets/screenshots/home-page.png";
 import checkInPageScreenshot from "@/assets/screenshots/check-in-screen.png";
 import explorePageScreenshot from "@/assets/screenshots/explore-page.png";
-import { img } from "framer-motion/client";
-// Add new screenshots here by importing them, then add to the screenshots array below
-// Example: import secondScreenshot from "@/assets/screenshots/second-page.png";
 
 /**
  * HeroSection Component
@@ -17,9 +13,8 @@ import { img } from "framer-motion/client";
  * @param {number} props.rating - App store rating
  * @param {string} props.matches - Formatted match count
  */
-export function HeroSection({ rating, matches }) {
-  // Array of screenshots - add new images here as you import them
-  // Each phone mock will use the corresponding screenshot in order
+export function HeroSection() {
+  const reduceMotion = useReducedMotion();
   const screenshots = [
     {
       image: homePageScreenshot,
@@ -34,57 +29,44 @@ export function HeroSection({ rating, matches }) {
       alt: "ThirdSpace app explore page"
     }
   ];
-  return (
-    <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 pt-20 pb-10 grid lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-extrabold tracking-tight"
-          >
-            Stop planning.{" "}
-            <span className="bg-clip-text text-transparent brand-gradient">
-              Start vibing.
-            </span>
-          </motion.h1>
-          <p className="mt-5 text-lg text-white/80 max-w-xl">
-            Your AI companion that instantly connects you with the perfect third
-            place experience happening within 30 minutes. No overthinking—just
-            magical matches and real-world connection.
-          </p>
 
-          <div id="download" className="mt-8 flex items-center">
+  const reveal = reduceMotion
+    ? { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.1 } }
+    : {
+        initial: { opacity: 0, y: 16 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+      };
+
+  return (
+    <section className="hero" aria-labelledby="hero-title">
+      <div className="page-frame hero__layout">
+        <div className="hero__copy">
+          <motion.h1 id="hero-title" {...reveal}>
+            Stop planning. <span>Start vibing.</span>
+          </motion.h1>
+          <p>
+            Tell Thirdspace how you want to feel. Get a few nearby places that
+            fit, head out, and build an offline routine that actually sticks.
+          </p>
+          <div id="download" className="hero__cta">
             <AppStoreBadge />
+            <a className="text-link" href="#how">See the three steps</a>
           </div>
         </div>
-
-        {/* 3D-ish phone stack */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="relative"
-        >
-          <div className="absolute -inset-8 -z-10 blur-2xl opacity-70 rounded-full brand-gradient-135" />
-          <div className="grid grid-cols-3 gap-4 rotate-[-6deg]">
-            {screenshots.map((screenshot, index) => (
-              <div
-                key={index}
-                className={`aspect-[9/19] rounded-[28px] border border-white/10 backdrop-blur-xl bg-white/5 ${shimmer} shadow-2xl overflow-hidden`}
-              >
+        <motion.figure className="hero__screens" {...reveal}>
+          {screenshots.map((screenshot, index) => (
+            <div className={`hero__screen hero__screen--${index + 1}`} key={screenshot.alt}>
                 <img
                   src={screenshot.image}
                   alt={screenshot.alt}
-                  className="w-full h-full object-cover rounded-[28px]"
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
-              </div>
-            ))}
-          </div>
-        </motion.div>
+            </div>
+          ))}
+          <figcaption>Personalized picks · live map · check-ins</figcaption>
+        </motion.figure>
       </div>
     </section>
   );
 }
-

@@ -25,50 +25,43 @@ export function Footer() {
   };
 
   return (
-    <footer className="py-8 border-t border-white/10">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={thirdspaceLogo} alt="Thirdspace Logo" className="h-8 w-auto" />
+    <footer className="site-footer">
+      <div className="page-frame site-footer__inner">
+          <Link to="/" className="site-footer__brand" aria-label="Thirdspace home">
+            <img src={thirdspaceLogo} alt="Thirdspace" />
           </Link>
-          
-          {/* Navigation Links */}
-          <nav className="flex items-center gap-6 text-sm text-white/60">
-            <Link to="/privacy" className="hover:text-white transition">
+          <nav className="site-footer__links" aria-label="Legal and contact">
+            <Link to="/privacy">
               Privacy
             </Link>
-            <Link to="/privacy/terms" className="hover:text-white transition">
+            <Link to="/privacy/terms">
               Terms
             </Link>
-            <Link to="/privacy/security" className="hover:text-white transition">
+            <Link to="/privacy/security">
               Security
             </Link>
-            <span className="text-white/20">|</span>
             <button
               onClick={handleCopyEmail}
-              className="flex items-center gap-1.5 hover:text-white transition"
+              className="site-footer__contact"
               title={`Email: ${CONTACT_EMAIL}`}
+              aria-live="polite"
             >
               {copied ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-green-400" />
-                  <span className="text-green-400">Copied!</span>
+                  <Check aria-hidden="true" />
+                  <span>Copied</span>
                 </>
               ) : (
                 <>
-                  <Mail className="w-3.5 h-3.5" />
+                  <Mail aria-hidden="true" />
                   <span>Contact</span>
                 </>
               )}
             </button>
           </nav>
-          
-          {/* Copyright */}
-          <div className="text-sm text-white/40">
+          <div className="site-footer__copyright">
             © {new Date().getFullYear()} thirdspace
           </div>
-        </div>
       </div>
     </footer>
   );
