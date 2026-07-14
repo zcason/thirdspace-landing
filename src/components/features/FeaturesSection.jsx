@@ -13,7 +13,7 @@ export function FeaturesSection() {
     {
       step: "1",
       title: "Choose the feeling.",
-      desc: "Start with the atmosphere you want, not a category you have to search. Thirdspace turns mood, energy, time, and weather into personalized picks.",
+      desc: "Tell us how you feel, what kind of energy you want, and how far you want to go. Thirdspace narrows the list to a few nearby places that actually fit.",
       screenshot: homePageScreenshot,
       alt: "Thirdspace personalized picks screen",
       className: "workflow-card--feeling",
@@ -21,7 +21,7 @@ export function FeaturesSection() {
     {
       step: "2",
       title: "See what’s nearby.",
-      desc: "A live map narrows the city to third places that fit your vibe, with useful context and one-tap directions when you’re ready to go.",
+      desc: "See cafés, libraries, parks, and other third places on a live map with vibe tags, useful context, and quick directions.",
       screenshot: explorePageScreenshot,
       alt: "Thirdspace live map screen",
       className: "workflow-card--nearby",
@@ -29,7 +29,7 @@ export function FeaturesSection() {
     {
       step: "3",
       title: "Check in. Come back.",
-      desc: "Check in when you arrive, remember the places that worked, and turn leaving home into an offline routine instead of another plan for later.",
+      desc: "Check in when you go, remember the places you love, and build a richer offline routine over time.",
       screenshot: checkInScreenshot,
       alt: "Thirdspace check-in screen",
       className: "workflow-card--routine",

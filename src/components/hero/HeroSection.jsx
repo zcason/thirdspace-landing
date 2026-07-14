@@ -46,8 +46,8 @@ export function HeroSection() {
             Stop planning. <span>Start vibing.</span>
           </motion.h1>
           <p>
-            Tell Thirdspace how you want to feel. Get a few nearby places that
-            fit, head out, and build an offline routine that actually sticks.
+            Tell Thirdspace how you want to feel. Get a few nearby third places
+            that fit right now, head out, and build an offline routine that sticks.
           </p>
           <div id="download" className="hero__cta">
             <AppStoreBadge />

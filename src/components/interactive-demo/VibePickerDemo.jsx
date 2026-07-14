@@ -59,7 +59,7 @@ export function VibePickerDemo() {
       </div>
       <div className="vibe-demo__results">
         <div className="place-list" aria-live="polite">
-          <p className="place-list__summary">Nearby ideas for {selectedVibe.label.toLowerCase()}</p>
+          <p className="place-list__summary">Nearby third places for {selectedVibe.label.toLowerCase()}</p>
           <ul>
             {results[selected].map((place) => (
               <li key={place.name}>

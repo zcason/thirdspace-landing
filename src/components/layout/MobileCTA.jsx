@@ -14,8 +14,8 @@ export function MobileCTA() {
         className={`rounded-2xl px-4 py-3 flex items-center justify-between ${gradients.glass} shadow-xl`}
       >
         <div className="text-sm">
-          <div className="font-semibold">Find your perfect vibe</div>
-          <div className="text-white/70 text-xs">Match in seconds</div>
+          <div className="font-semibold">Find your next place</div>
+          <div className="text-white/70 text-xs">Get out in seconds</div>
         </div>
         <a
           href={APP_STORE_URL}

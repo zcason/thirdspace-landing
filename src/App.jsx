@@ -26,7 +26,7 @@ export default function App() {
             </div>
             <p>
               Pick the atmosphere you want. Thirdspace turns it into a short,
-              useful list of real places to consider nearby.
+              useful list of nearby third places that fit the moment.
             </p>
           </div>
           <div className="page-frame">
