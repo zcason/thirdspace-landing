@@ -55,15 +55,17 @@ export function HeroSection() {
           </div>
         </div>
         <motion.figure className="hero__screens" {...reveal}>
-          {screenshots.map((screenshot, index) => (
-            <div className={`hero__screen hero__screen--${index + 1}`} key={screenshot.alt}>
+          <div className="hero__screen-stack">
+            {screenshots.map((screenshot, index) => (
+              <div className={`hero__screen hero__screen--${index + 1}`} key={screenshot.alt}>
                 <img
                   src={screenshot.image}
                   alt={screenshot.alt}
                   loading={index === 0 ? "eager" : "lazy"}
                 />
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
           <figcaption>Personalized picks · live map · check-ins</figcaption>
         </motion.figure>
       </div>

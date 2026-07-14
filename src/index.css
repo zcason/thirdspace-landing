@@ -304,9 +304,13 @@ button:active {
 }
 
 .hero__screens {
-  position: relative;
-  min-height: 31rem;
   margin: 0;
+}
+
+.hero__screen-stack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 7;
 }
 
 .hero__screen {
@@ -346,12 +350,18 @@ button:active {
 }
 
 .hero__screens figcaption {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  width: max-content;
+  max-width: 100%;
+  margin: var(--space-xs) auto 0;
+  padding: var(--space-2xs) var(--space-sm);
+  border: var(--rule-thin) solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  background: var(--color-paper);
   color: var(--color-ink-soft);
   font-size: var(--text-sm);
   font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .workflow {
@@ -909,10 +919,6 @@ button:active {
     max-width: 12ch;
   }
 
-  .hero__screens {
-    min-height: 30rem;
-  }
-
   .workflow__intro,
   .demo-section__heading,
   .closing__statement {
@@ -959,10 +965,6 @@ button:active {
 }
 
 @media (max-width: 48rem) {
-  .hero__screens {
-    min-height: 25rem;
-  }
-
   .workflow,
   .demo-section {
     padding-block: var(--space-4xl);
@@ -1032,10 +1034,6 @@ button:active {
   .hero__cta {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .hero__screens {
-    min-height: 21rem;
   }
 
   .hero__screen {
