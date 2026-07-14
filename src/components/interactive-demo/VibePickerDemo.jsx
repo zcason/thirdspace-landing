@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { MapPin } from "lucide-react";
+import { BookOpen, Coffee, MapPin, Palette, Trees } from "lucide-react";
 import { MapPreview } from "./MapPreview";
-import { gradients } from "@/constants/brand";
 
 /**
  * VibePickerDemo Component
@@ -9,103 +8,72 @@ import { gradients } from "@/constants/brand";
  */
 export function VibePickerDemo() {
   const vibes = [
-    { key: "calm", label: "Calm + Study", emoji: "📚" },
-    { key: "creative", label: "Creative + Social", emoji: "🎵" },
-    { key: "outdoors", label: "Outdoors + Recharge", emoji: "🌳" },
+    { key: "calm", label: "Calm + study", icon: BookOpen },
+    { key: "creative", label: "Creative + social", icon: Palette },
+    { key: "outdoors", label: "Outdoors + recharge", icon: Trees },
   ];
 
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState("calm");
 
   const results = {
-    calm: (
-      <div className="space-y-2 text-sm">
-        <div>Got it. 3 options nearby with "calm + study" energy.</div>
-        <div>
-          • <strong>Houndstooth Coffee (Downtown)</strong> — <strong>94%</strong>{" "}
-          vibe match (sunny corner + great Wi-Fi) ☕️
-        </div>
-        <div>
-          • <strong>Austin Central Library</strong> — <strong>92%</strong>{" "}
-          (6th-floor nooks + rooftop garden) 📚
-        </div>
-        <div>
-          • <strong>Zilker Botanical Garden</strong> — <strong>90%</strong>{" "}
-          (quiet trails + nature soundscape) 🌿
-        </div>
-      </div>
-    ),
-    creative: (
-      <div className="space-y-2 text-sm">
-        <div>Dialed in. 3 options with "creative + social" energy in Austin.</div>
-        <div>
-          • <strong>Mozart's Coffee Roasters</strong> — <strong>93%</strong>{" "}
-          (live piano + lake views) 🎹☕️
-        </div>
-        <div>
-          • <strong>The Cathedral</strong> — <strong>91%</strong> (local artist
-          gallery + coworking) 🎨
-        </div>
-        <div>
-          • <strong>Meanwhile Brewing</strong> — <strong>89%</strong> (artisanal
-          vibes + community events) 🍻
-        </div>
-      </div>
-    ),
-    outdoors: (
-      <div className="space-y-2 text-sm">
-        <div>Locked. 3 options with "outdoors + recharge" energy in Austin.</div>
-        <div>
-          • <strong>Lady Bird Lake Trail</strong> — <strong>95%</strong>{" "}
-          (golden-hour loop + skyline view) 🚶‍♂️
-        </div>
-        <div>
-          • <strong>Pease Park</strong> — <strong>92%</strong> (shaded hammocks +
-          picnic spots) 🌳
-        </div>
-        <div>
-          • <strong>Barton Springs Pool</strong> — <strong>90%</strong>{" "}
-          (refreshing dip + sun lawn) 💦
-        </div>
-      </div>
-    ),
+    calm: [
+      { name: "Houndstooth Coffee", note: "Bright corners and room to settle in", icon: Coffee },
+      { name: "Austin Central Library", note: "Quiet nooks with a rooftop break", icon: BookOpen },
+      { name: "Zilker Botanical Garden", note: "A slower walk with space to read", icon: Trees },
+    ],
+    creative: [
+      { name: "Mozart’s Coffee Roasters", note: "Lake views with a lively soundtrack", icon: Coffee },
+      { name: "The Cathedral", note: "Local art in a social workspace", icon: Palette },
+      { name: "Meanwhile Brewing", note: "Community events and room to wander", icon: MapPin },
+    ],
+    outdoors: [
+      { name: "Lady Bird Lake Trail", note: "An easy loop with skyline views", icon: Trees },
+      { name: "Pease Park", note: "Shade, lawns, and a slower pace", icon: Trees },
+      { name: "Barton Springs Pool", note: "Cold water and a sunny lawn", icon: MapPin },
+    ],
   };
 
+  const selectedVibe = vibes.find((vibe) => vibe.key === selected);
+
   return (
-    <div className={`rounded-3xl p-5 ${gradients.glass}`}>
-      <div className="flex items-center gap-2 text-sm text-white/70 mb-4">
-        <MapPin className="w-4 h-4" /> Austin, Texas
+    <div className="vibe-demo">
+      <div className="vibe-demo__toolbar">
+        <div className="vibe-demo__location">
+          <MapPin aria-hidden="true" />
+          <span>Austin, Texas</span>
+        </div>
+        <p>Choose a feeling</p>
       </div>
-      <div className="text-sm text-white/80 mb-3">
-        Pick a vibe to preview instant matches:
-      </div>
-      <div className="grid grid-cols-3 gap-2 mb-5">
+      <div className="vibe-demo__controls" aria-label="Choose a vibe">
         {vibes.map((v) => (
           <button
             key={v.key}
             onClick={() => setSelected(v.key)}
-            className={`rounded-xl px-3 py-2 border border-white/10 bg-white/5 hover:bg-white/10 text-left ${
-              selected === v.key ? "ring-2 ring-white/30" : ""
-            }`}
+            className="vibe-control"
+            aria-pressed={selected === v.key}
           >
-            <div className="font-medium">
-              {v.emoji} {v.label}
-            </div>
+            <v.icon aria-hidden="true" />
+            <span>{v.label}</span>
           </button>
         ))}
       </div>
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className={`rounded-2xl p-4 ${gradients.glass}`}>
-          {!selected ? (
-            <div className="text-white/70 text-sm">
-              Select a vibe above to see 3 nearby matches.
-            </div>
-          ) : (
-            results[selected]
-          )}
+      <div className="vibe-demo__results">
+        <div className="place-list" aria-live="polite">
+          <p className="place-list__summary">Nearby ideas for {selectedVibe.label.toLowerCase()}</p>
+          <ul>
+            {results[selected].map((place) => (
+              <li key={place.name}>
+                <place.icon aria-hidden="true" />
+                <div>
+                  <strong>{place.name}</strong>
+                  <span>{place.note}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
-        <MapPreview vibe={selected || "calm"} />
+        <MapPreview vibe={selected} />
       </div>
     </div>
   );
 }
-

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Download } from "lucide-react";
+import { ArrowDownToLine } from "lucide-react";
 import { APP_STORE_URL } from "@/constants/config";
 import thirdspaceLogo from "@/assets/images/thirdspace-logo.png";
 
@@ -10,19 +10,25 @@ import thirdspaceLogo from "@/assets/images/thirdspace-logo.png";
  */
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-[#0B1530]/60 border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={thirdspaceLogo} alt="Thirdspace Logo" className="h-10 w-auto" />
+    <header className="site-header">
+      <div className="nav-slab page-frame">
+        <Link to="/" className="nav-slab__brand" aria-label="Thirdspace home">
+          <img src={thirdspaceLogo} alt="Thirdspace" />
         </Link>
+        <nav className="nav-slab__links" aria-label="Primary navigation">
+          <a href="#how">How it works</a>
+          <a href="#demo">Try Austin</a>
+        </nav>
         <a
           href={APP_STORE_URL}
-          className="hidden lg:inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white/10 hover:bg-white/20 transition"
+          className="nav-slab__cta"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <Download className="w-4 h-4" /> Download
+          <ArrowDownToLine aria-hidden="true" />
+          <span>Get the app</span>
         </a>
       </div>
     </header>
   );
 }
-

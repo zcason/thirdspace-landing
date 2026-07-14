@@ -14,14 +14,12 @@ export function AppStoreBadge() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Download on the App Store"
-      className="inline-block transition-opacity hover:opacity-80"
+      className="app-store-badge"
     >
       <img
         src={appStoreBadge}
         alt="Download on the App Store"
-        className="h-[40px] w-auto"
       />
     </a>
   );
 }
-
