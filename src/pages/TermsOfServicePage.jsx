@@ -150,7 +150,6 @@ export function TermsOfServicePage() {
           href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-cyan-400 hover:text-cyan-300 underline"
         >
           Apple's Licensed Application End User License Agreement
         </a>
@@ -159,13 +158,13 @@ export function TermsOfServicePage() {
       <h2 id="contact">15. Contact Us</h2>
       <p>
         If you have any questions about these Terms, please contact us at{" "}
-        <a href="mailto:hi@jointhirdspace.app" className="text-cyan-400 hover:text-cyan-300 underline">
+        <a href="mailto:hi@jointhirdspace.app">
           hi@jointhirdspace.app
         </a>.
       </p>
 
-      <div className="mt-8 pt-6 border-t border-white/10">
-        <p className="text-sm text-white/60">
+      <div className="legal-prose__note">
+        <p>
           By using Thirdspace, you acknowledge that you have read, understood, and agree to be 
           bound by these Terms of Service.
         </p>
@@ -173,5 +172,4 @@ export function TermsOfServicePage() {
     </LegalPageLayout>
   );
 }
-
 

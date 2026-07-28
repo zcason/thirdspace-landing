@@ -24,7 +24,7 @@ export function DataCollectionPage() {
       currentPath="/privacy/data-collection"
       sections={sections}
     >
-      <p className="text-xl text-white/80 mb-8">
+      <p className="legal-prose__lede">
         At thirdspace, we believe in transparency. Here's exactly what data we collect and why.
       </p>
 
@@ -96,5 +96,4 @@ export function DataCollectionPage() {
     </LegalPageLayout>
   );
 }
-
 

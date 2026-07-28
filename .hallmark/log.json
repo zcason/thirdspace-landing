@@ -9,5 +9,17 @@
     "nav": "N7 rounded-slab",
     "footer": "Ft8 marquee-statement",
     "brief": "Thirdspace playful landing-page redesign"
+  },
+  {
+    "date": "2026-07-27",
+    "scope": "app",
+    "macrostructure": "Long Document",
+    "theme": "custom",
+    "theme_axes": "light / rounded-sans / cool",
+    "vibe": "warm, tactile, plain-spoken",
+    "enrichment": "typography only",
+    "nav": "N7 rounded-slab",
+    "footer": "shared site footer",
+    "brief": "Thirdspace privacy and legal design-system alignment"
   }
 ]

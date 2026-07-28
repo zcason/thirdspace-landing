@@ -27,7 +27,7 @@ export function SecurityPage() {
       currentPath="/privacy/security"
       sections={sections}
     >
-      <p className="text-xl text-white/80 mb-8">
+      <p className="legal-prose__lede">
         Your security is our priority. Here's how we keep your data safe.
       </p>
 
@@ -132,5 +132,4 @@ export function SecurityPage() {
     </LegalPageLayout>
   );
 }
-
 
